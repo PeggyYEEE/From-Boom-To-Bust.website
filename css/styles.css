@@ -284,8 +284,7 @@ hr {
 
 hr:not([size]) {
   height: 1px;
-}
-
+}/* Styles for large devices */
 h1, h2, h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -296,6 +295,30 @@ p {
   font-weight: 400;
   font-size: 1.2rem;
 }
+
+/* Styles for small devices */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
 
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -905,9 +928,6 @@ progress {
   font-size: 0.875em;
   color: #6c757d;
 }
-
-
-
 .container,
 .container-fluid,
 .container-xxl,
@@ -920,7 +940,48 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  max-width: 100%;
 }
+
+@media (max-width: 992px) {
+  .container,
+  .container-fluid,
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .container-fluid,
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  .container-fluid,
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    padding-right: 0.125rem;
+    padding-left: 0.125rem;
+  }
+}
+
 
 
 .containermap
@@ -11620,9 +11681,7 @@ p {
 
 #after-quiz3 {
   display: none;
-}
-
-.page-section {
+}.page-section {
   padding: 6rem 0;
   background-color:#343a40;
 }
@@ -11634,8 +11693,36 @@ p {
 
 .page-section-explaination {
   padding: 6rem 0;
-  
 }
+
+@media (max-width: 768px) {
+  .page-section {
+    padding: 4rem 0;
+  }
+  
+  .sectiondivider{
+    padding: 15rem 0;
+  }
+  
+  .page-section-explaination {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-section {
+    padding: 3rem 0;
+  }
+  
+  .sectiondivider{
+    padding: 10rem 0;
+  }
+  
+  .page-section-explaination {
+    padding: 3rem 0;
+  }
+}
+
 
 .question{
   color: #0dcaf0;
@@ -12299,8 +12386,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 
 
-
-
+/* Styles for large devices */
 .question {
   position: relative;
   background: #101214;
@@ -12312,19 +12398,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   padding-left: 1em;
   padding-top: 3em;
 }
-
-.question2{
-  position: relative;
-  background: rgb(13, 13, 13);
-  color: rgb(255, 255, 255);
-  width: 100%;
-  margin: 0px auto;
-  max-width: 100%;
-  padding-right: 1em;
-  padding-left: 1em;
-  
-}
-
 
 .question__number {
   display: flex;
@@ -12361,13 +12434,11 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .question__answer {
-  
   padding: 3em;
   border: 2px solid #ff006e;
   border-radius: 15px;
   text-align: center;
   max-width: 1320px;
-  
 }
 
 .image-caption {
@@ -12402,15 +12473,63 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 1.1rem;
 }
 
-
-.separator {
-  margin-top: 8em;
-}
-
 #chinamap {
   width: 100%;
   height: 700px;
 }
+
+/* Styles for small devices */
+@media only screen and (max-width: 600px) {
+  .question {
+    max-width: 100%;
+    padding-top: 2em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+
+  .question__number {
+    font-size: 24px;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+  }
+
+  .question__number::before,
+  .question__number::after {
+    height: 1px;
+  }
+
+  .question__text {
+    font-size: 2.5rem;
+  }
+
+  .question__answer {
+    padding: 2em;
+  }
+
+  .question__answer__head {
+    padding: 0px 1.5em;
+    font-size: 1rem;
+  }
+
+  .question__answer__title {
+    font-size: 20px;
+    padding: 1.5rem;
+  }
+
+  .question__answer__explanation__text {
+    padding: 1.5rem;
+    font-size: 1rem;}
+
+    #chinamap {
+    height: 400px;
+    }
+    
+    .image-caption {
+    font-size: 1rem;
+    margin-top: 5px;
+    }
+    }
+
 
 .l-scrolly l-scrolly--left-sticky{
   {
@@ -12724,6 +12843,16 @@ media (min-width: 60em)
 
 }
 
+@media only screen and (max-width: 480px) {
+  .l-rail {
+  width: 90%;
+  margin: auto;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  max-width: calc(30em + 2em * 2);
+  }
+  }
+
 .mouse-scroll {
   position: absolute;
   bottom: 30px;
@@ -12944,4 +13073,5 @@ html {
   max-width: 1320px;
   
 }
+
 
