@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
             question:'What is LGFV?',
             choice1:'Large Government Funding Vehicle',
             choice2:'Land Guarantee Financing Vehicle',
-            choice3:'Local Government Financial Vehicle',
+            choice3:'Local Government Financing Vehicle',
             choice4:'Legal Government Finance Verification',
             
             answer: 3,
