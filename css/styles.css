@@ -11853,6 +11853,7 @@ section.plot {
     margin-right: 0;
   }
 }
+
 header.masthead {
   text-shadow: 0 0 20px #770e25, 0 0 32px #770e25;
   padding-top: 10.5rem;
@@ -11865,6 +11866,17 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  z-index: -1;
+}
+
+.housepic {
+  position: relative;
+  z-index: 1;
+}
+
+header .masthead-heading, header .masthead-subheading {
+  position: relative;
+  z-index: 2;
 }
 
 .mapmasterhead{
