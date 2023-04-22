@@ -11863,7 +11863,19 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  z-index: -1;
 }
+
+.housepic {
+  position: relative;
+  z-index: 1;
+}
+
+header .masthead-heading, header .masthead-subheading {
+  position: relative;
+  z-index: 2;
+}
+
 
 .mapmasterhead{
   padding-top: 10.5rem;
